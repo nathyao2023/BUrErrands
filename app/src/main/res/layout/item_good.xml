@@ -65,7 +65,7 @@
             android:layout_toRightOf="@+id/iv_goods"
             android:lines="1"
             android:text="￥100000.00"
-            android:textColor="#DF550B"
+            android:textColor="#990000"
             android:textSize="20sp"
             android:textStyle="bold" />
 
