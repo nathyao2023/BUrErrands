@@ -26,5 +26,17 @@ public class GoodsAdapter extends BaseQuickAdapter<ShoppingCartResponse.OrderDat
                 .setText(R.id.tv_goods_num,item.getCount()+"");
         ImageView goodImg = helper.getView(R.id.iv_goods);
         Glide.with(mContext).load(item.getDefaultPic()).into(goodImg);
+
+        ImageView checkedGoods = helper.getView(R.id.iv_checked_goods);
+
+        if (item.isChecked()) {
+            checkedGoods.setImageDrawable(mContext.getDrawable(R.drawable.ic_checked));
+        } else {
+            checkedGoods.setImageDrawable(mContext.getDrawable(R.drawable.ic_check));
+        }
+
+        helper.addOnClickListener(R.id.iv_checked_goods)
+                .addOnClickListener(R.id.tv_increase_goods_num)
+                .addOnClickListener(R.id.tv_reduce_goods_num);
     }
 }

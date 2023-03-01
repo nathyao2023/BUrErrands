@@ -7,14 +7,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.example.myapplication.adapter.StoreAdapter;
 import com.example.myapplication.util.Constant;
+import com.example.myapplication.util.GoodsCallback;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements GoodsCallback {
     public static final String TAG = "MainActivity";
 
     private RecyclerView rvStore;
@@ -35,9 +37,36 @@ public class MainActivity extends AppCompatActivity {
         ShoppingCartResponse carResponse = new Gson().fromJson(Constant.CAR_JSON, ShoppingCartResponse.class);
 
         mList.addAll(carResponse.getOrderData());
-        storeAdapter = new StoreAdapter(R.layout.item_store, mList);
+        storeAdapter = new StoreAdapter(R.layout.item_store, mList,this);
         rvStore.setLayoutManager(new LinearLayoutManager(this));
         rvStore.setAdapter(storeAdapter);
+
+        storeAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
+            @Override
+            public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
+                ShoppingCartResponse.OrderDataBean storeBean = mList.get(position);
+                if(view.getId() == R.id.iv_checked_store){
+                    storeBean.setChecked(!storeBean.isChecked());
+                    storeAdapter.notifyDataSetChanged();
+
+                    if(storeBean.isChecked()){
+                        storeAdapter.controlGoods(storeBean.getShopId(),true);
+                    }else{
+                        storeAdapter.controlGoods(storeBean.getShopId(),false);
+                    }
+                }
+            }
+        });
+    }
+    @Override
+    public void checkedStore(int shopId,boolean state) {
+        for (ShoppingCartResponse.OrderDataBean bean : mList) {
+
+            if(shopId == bean.getShopId()){
+                bean.setChecked(state);
+                storeAdapter.notifyDataSetChanged();
+            }
+        }
     }
 
-}
+} 

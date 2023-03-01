@@ -34,6 +34,16 @@ public class ShoppingCartResponse {
         private String shopName;
         private List<CartlistBean> cartlist;
 
+        private boolean isChecked;
+
+        public boolean isChecked() {
+            return isChecked;
+        }
+
+        public void setChecked(boolean checked) {
+            isChecked = checked;
+        }
+
         public int getShopId() {
             return shopId;
         }
@@ -69,6 +79,16 @@ public class ShoppingCartResponse {
             private String size;
             private double price;
             private int count;
+
+            private boolean isChecked;
+
+            public boolean isChecked() {
+                return isChecked;
+            }
+
+            public void setChecked(boolean checked) {
+                isChecked = checked;
+            }
 
             public String getCondiment() {
                 return condiment;
