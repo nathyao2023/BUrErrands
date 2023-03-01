@@ -83,7 +83,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="8dp"
             android:layout_toLeftOf="@+id/tv_settlement"
-            android:text="￥0"
+            android:text="$0"
             android:textColor="#DF3B0D"
             android:textSize="14sp" />
 
