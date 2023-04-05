@@ -3,6 +3,7 @@ package com.example.myapplication.adapter;
 
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -80,18 +81,50 @@ public class StoreAdapter extends BaseQuickAdapter<ShoppingCartResponse.OrderDat
 
                         goodsAdapter.notifyDataSetChanged();
                         controlStore(item);
+                        //product price control
+                        goodsCallback.calculationPrice();
                         break;
                     case R.id.tv_increase_goods_num:
-
+                        updateGoodsNum(goodsBean,goodsAdapter,true);
                         break;
                     case R.id.tv_reduce_goods_num:
-
+                        updateGoodsNum(goodsBean,goodsAdapter,false);
                         break;
                     default:
                         break;
                 }
             }
         });
+    }
+    /**
+     * Modify the quantity of goods to increase or decrease
+     * @param goodsBean
+     * @param goodsAdapter
+     * @param state  true increases false decreases
+     */
+    private void updateGoodsNum(ShoppingCartResponse.OrderDataBean.CartlistBean goodsBean, GoodsAdapter goodsAdapter,boolean state) {
+        //Fake an inventory value of 10
+        int inventory = 10;
+        int count = goodsBean.getCount();
+
+        if(state){
+            if (count >= inventory){
+                Toast.makeText(mContext,"The quantity of goods cannot exceed the inventory value~",Toast.LENGTH_SHORT).show();
+                return;
+            }
+            count++;
+        }else {
+            if (count <= 1){
+                Toast.makeText(mContext,"Already reach the minimum product quantity~",Toast.LENGTH_SHORT).show();
+                return;
+            }
+            count--;
+        }
+        goodsBean.setCount(count);//Set item quantity
+        //refresh adapter
+        goodsAdapter.notifyDataSetChanged();
+        //Calculate item price
+        goodsCallback.calculationPrice();
     }
 
 }

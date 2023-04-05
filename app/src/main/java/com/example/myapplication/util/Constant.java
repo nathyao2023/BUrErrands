@@ -67,7 +67,7 @@ public class Constant {
             "          \"productName\": \"Dragon Roll\",\n" +
             "          \"condiment\": \"\",\n" +
             "          \"size\": \"\",\n" +
-            "          \"price\": 14.99,\n" +
+            "          \"price\": 14.00,\n" +
             "          \"count\":1\n" +
             "        },\n" +
             "        {\n" +
@@ -79,7 +79,7 @@ public class Constant {
             "          \"productName\": \"The Poke\",\n" +
             "          \"condiment\": \"\",\n" +
             "          \"size\": \"\",\n" +
-            "          \"price\": 17.99,\n" +
+            "          \"price\": 17.00,\n" +
             "          \"count\":1\n" +
             "        }\n" +
             "      ]\n" +
