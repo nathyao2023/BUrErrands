@@ -5,14 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class B2Activity extends AppCompatActivity {
+public class CActivity extends AppCompatActivity {
 
     private Button btnStudy1,btnStudy2,btnStudy3,btnStudy4,btnStudy5,btnStudy6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_b2);
+        setContentView(R.layout.activity_c);
 
         btnStudy1 = findViewById(R.id.btn_study1);
         btnStudy2 = findViewById(R.id.btn_study2);

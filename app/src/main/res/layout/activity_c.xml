@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ae535b"
-    tools:context=".B2Activity">
+    tools:context=".CActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".B1Activity">
+        tools:context=".DActivity">
 
         <Button
             android:id="@+id/btn_study1"

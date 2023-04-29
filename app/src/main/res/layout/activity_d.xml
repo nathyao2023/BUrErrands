@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context=".B1Activity"
+    tools:context=".DActivity"
     android:background="#ae535b">
 
     <LinearLayout
