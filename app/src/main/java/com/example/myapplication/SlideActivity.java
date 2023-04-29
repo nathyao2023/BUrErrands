@@ -69,7 +69,7 @@ public class SlideActivity extends AppCompatActivity {
                     intent = new Intent(SlideActivity.this, MainPageActivity.class);
                     break;
                 case R.id.btn_relax:
-                    intent = new Intent(SlideActivity.this, DActivity.class);
+                    intent = new Intent(SlideActivity.this, DeliveryActivity.class);
                     break;
                 case R.id.bt_toEdit:
                     intent = new Intent(SlideActivity.this, EditInformationActivity.class);
@@ -114,14 +114,14 @@ public class SlideActivity extends AppCompatActivity {
         }
     }
 
-    public void toLogout(View view) {                                             //log out
+    public void toLogout(View view) {                                             //登出
         Intent intent =new Intent(this,LoginActivity.class);
         Toast.makeText(this, "Log out", Toast.LENGTH_SHORT).show();
         startActivity(intent);
 
         SharedPreferences spf = getSharedPreferences("UsernamePassword", MODE_PRIVATE);
         SharedPreferences.Editor editor = spf.edit();
-        editor.putBoolean("auto", false);
+        editor.putBoolean("auto", false);                                   //取消自动登录勾选
         editor.apply();
         finish();
     }
