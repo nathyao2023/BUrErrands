@@ -28,10 +28,10 @@
             android:name=".RegisterActivity"
             android:exported="false" /> <!-- 防止net::ERR_CLEARTEXT_NOT_PERMITTED -->
         <activity
-            android:name=".B1Activity"
+            android:name=".DActivity"
             android:exported="false" />
         <activity
-            android:name=".B2Activity"
+            android:name=".CActivity"
             android:exported="false" />
         <activity
             android:name=".SlideActivity"

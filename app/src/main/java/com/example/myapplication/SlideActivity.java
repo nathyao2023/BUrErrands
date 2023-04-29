@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.myapplication.util.DBHelper;
 import com.example.myapplication.util.ImageUtil;
+import com.example.myapplication.util.MainPageActivity;
 import com.example.myapplication.util.SlideMenu;
 import com.example.myapplication.util.User;
 
@@ -65,10 +66,10 @@ public class SlideActivity extends AppCompatActivity {
             Intent intent = null;
             switch (view.getId()) {
                 case R.id.btn_study:
-                    intent = new Intent(SlideActivity.this, B2Activity.class);
+                    intent = new Intent(SlideActivity.this, MainPageActivity.class);
                     break;
                 case R.id.btn_relax:
-                    intent = new Intent(SlideActivity.this, B1Activity.class);
+                    intent = new Intent(SlideActivity.this, DActivity.class);
                     break;
                 case R.id.bt_toEdit:
                     intent = new Intent(SlideActivity.this, EditInformationActivity.class);
@@ -113,14 +114,14 @@ public class SlideActivity extends AppCompatActivity {
         }
     }
 
-    public void toLogout(View view) {                                             //登出
+    public void toLogout(View view) {                                             //log out
         Intent intent =new Intent(this,LoginActivity.class);
         Toast.makeText(this, "Log out", Toast.LENGTH_SHORT).show();
         startActivity(intent);
 
         SharedPreferences spf = getSharedPreferences("UsernamePassword", MODE_PRIVATE);
         SharedPreferences.Editor editor = spf.edit();
-        editor.putBoolean("auto", false);                                   //取消自动登录勾选
+        editor.putBoolean("auto", false);
         editor.apply();
         finish();
     }
