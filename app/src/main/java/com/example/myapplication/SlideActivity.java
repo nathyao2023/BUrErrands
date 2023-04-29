@@ -64,11 +64,12 @@ public class SlideActivity extends AppCompatActivity {
         public void onClick(View view) {
             Intent intent = null;
             switch (view.getId()) {
+//                btn_study->B1Activity;btn_relax->B2Activity
                 case R.id.btn_study:
-                    intent = new Intent(SlideActivity.this, B2Activity.class);
+                    intent = new Intent(SlideActivity.this, B1Activity.class);
                     break;
                 case R.id.btn_relax:
-                    intent = new Intent(SlideActivity.this, B1Activity.class);
+                    intent = new Intent(SlideActivity.this, B2Activity.class);
                     break;
                 case R.id.bt_toEdit:
                     intent = new Intent(SlideActivity.this, EditInformationActivity.class);
