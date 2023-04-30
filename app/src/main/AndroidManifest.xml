@@ -29,7 +29,7 @@
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"
-            android:exported="false" /> <!-- 防止net::ERR_CLEARTEXT_NOT_PERMITTED -->
+            android:exported="false" />
         <activity
             android:name=".DActivity"
             android:exported="false" />
@@ -42,17 +42,11 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-<!--        <activity -->
-<!-- master -->
-<!--           android:name=".LoginActivity" -->
-<!--           android:exported="true" /> -->
-
-<!--           android:name=".MainActivity" -->
-<!--           android:exported="true"/> -->
-
-<!-- master -->
         <activity
             android:name=".util.MainPageActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".Order"
             android:exported="true"/>
 
         <activity

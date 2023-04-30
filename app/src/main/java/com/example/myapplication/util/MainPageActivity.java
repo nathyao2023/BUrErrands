@@ -1,5 +1,6 @@
 package com.example.myapplication.util;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
@@ -7,14 +8,17 @@ import android.content.Intent;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.CActivity;
 import com.example.myapplication.Domain.CategoryDomain;
 import com.example.myapplication.Domain.FoodDomain;
 import com.example.myapplication.MainActivity;
+import com.example.myapplication.Order;
 import com.example.myapplication.R;
 import com.example.myapplication.adapter.CategoryAdapter;
 import com.example.myapplication.adapter.PopularAdapter;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 import com.example.myapplication.util.DBHelper;
 import com.example.myapplication.util.ToastUtil;
 import com.example.myapplication.util.User;
@@ -25,12 +29,17 @@ public class MainPageActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter, adapter2;
     private RecyclerView recyclerViewCategoryList, recyclerViewPopularList;
 
-    private Button ShopCart;
+    private ImageButton ShopCart;
+    private ImageButton OrderHistory;
 
+
+
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
+        OrderHistory = findViewById(R.id.bt_OrderHistory);
         ShopCart = findViewById(R.id.bt_shopping_cart);
 
         setClickListener();
@@ -48,6 +57,10 @@ public class MainPageActivity extends AppCompatActivity {
             switch (view.getId()){
                 case R.id.bt_shopping_cart:
                     intent = new Intent(MainPageActivity.this, MainActivity.class);
+                    break;
+                case R.id.bt_OrderHistory:
+                    intent = new Intent(MainPageActivity.this, CActivity.class);
+                    break;
             }
             startActivity(intent);
         }
@@ -55,7 +68,9 @@ public class MainPageActivity extends AppCompatActivity {
 
     private void setClickListener(){
         OnClick onClick = new OnClick();
+        OrderHistory.setOnClickListener(onClick);
         ShopCart.setOnClickListener(onClick);
+
     }
 
 

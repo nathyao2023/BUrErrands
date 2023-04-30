@@ -40,15 +40,14 @@
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="24dp"
                     android:text="Hi Terrier"
                     android:textColor="#dd3d00"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
 
                 <TextView
                     android:id="@+id/textView3"
@@ -101,19 +100,31 @@
 
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/bt_shopping_cart"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:layout_marginEnd="28dp"
-                    android:background="?android:attr/colorActivatedHighlight"
-                    android:text="   Shopping Cart   "
-                    android:textColor="@color/white"
-                    android:textSize="15dp"
+
+                <ImageButton
+                    android:id="@+id/bt_OrderHistory"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="76dp"
+                    android:scaleType="centerCrop"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/orders_icon"
+                    tools:ignore="MissingConstrains"/>
+
+                <ImageButton
+                    android:id="@+id/bt_shopping_cart"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/shoppingcart_heart"
                     tools:ignore="MissingConstraints" />
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
