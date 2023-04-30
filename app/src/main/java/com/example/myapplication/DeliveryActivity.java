@@ -33,13 +33,13 @@ public class DeliveryActivity extends AppCompatActivity {
 
         // Populate the adapter with sample data
         List<Order> orders = new ArrayList<>();
-        orders.add(new Order(1, "Restaurant name 1 ", "1075 CommonWealth Ave", "455 CommonWealth Ave"));
-        orders.add(new Order(2, "Restaurant name 2 ", "1075 CommonWealth Ave", "455 CommonWealth Ave"));
-        orders.add(new Order(3,"KFC","1100 Commonwealth Ave","585 Commonwealth Ave"));
-        orders.add(new Order(4, "Restaurant name 3 ", "1075 CommonWealth Ave", "455 CommonWealth Ave"));
-        orders.add(new Order(5, "Restaurant name 4 ", "1075 CommonWealth Ave", "455 CommonWealth Ave"));
-        orders.add(new Order(6, "Restaurant name 5 ", "1075 CommonWealth Ave", "455 CommonWealth Ave"));
-        orders.add(new Order(7, "Restaurant name 6 ", "1075 CommonWealth Ave", "455 CommonWealth Ave"));
+        orders.add(new Order("#202301", "Restaurant name 1 ", "1075 CommonWealth Ave", "455 CommonWealth Ave"));
+        orders.add(new Order("#202302", "Restaurant name 2 ", "1075 CommonWealth Ave", "455 CommonWealth Ave"));
+        orders.add(new Order("#202303","KFC","1100 Commonwealth Ave","585 Commonwealth Ave"));
+        orders.add(new Order("#202304", "Restaurant name 3 ", "1075 CommonWealth Ave", "455 CommonWealth Ave"));
+        orders.add(new Order("#202305", "Restaurant name 4 ", "1075 CommonWealth Ave", "455 CommonWealth Ave"));
+        orders.add(new Order("#202306", "Restaurant name 5 ", "1075 CommonWealth Ave", "455 CommonWealth Ave"));
+        orders.add(new Order("#202307", "Restaurant name 6 ", "1075 CommonWealth Ave", "455 CommonWealth Ave"));
 
 
         deliveryAdapter.setNewInstance(orders); //将新的数据列表设置为适配器的数据源
