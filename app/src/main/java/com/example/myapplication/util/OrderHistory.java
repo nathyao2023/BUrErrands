@@ -11,16 +11,13 @@ import com.example.myapplication.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Order extends AppCompatActivity {
+public class OrderHistory extends AppCompatActivity {
 
     public RecyclerView recyclerView;
     public RecyclerView.LayoutManager layoutManager;
 
-    DBcontact database;
+    public OrderListAdapter adapter;
 
-
-    List<OrderInfo> order = new ArrayList<>();
-    OrderViewHolder adapter;
 
 
     @Override
@@ -28,12 +25,26 @@ public class Order extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
 
-        database = database;
-        recyclerView = (RecyclerView)findViewById(R.id.listOrders);
-        recyclerView.setHasFixedSize(true);
+        recyclerView = findViewById(R.id.listOrder);
+        adapter = new OrderListAdapter();
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-       // loadOrders();
+        recyclerView.setAdapter(adapter);
+
+
+        List<OrderInfo> orderhistory = new ArrayList<>();
+        orderhistory.add(new OrderInfo("#202301", "Fried Rice", "U12345678", "U87654321","UNCOMPLETED"));
+        orderhistory.add(new OrderInfo("#202302", "Hot Brewed Coffee","U12345678", "U13456789", "COMPLETED"));
+        orderhistory.add(new OrderInfo("#202303","Dragon Roll","U12345678","U87654321","COMPLETED"));
+        orderhistory.add(new OrderInfo("#202303","The Poke, Dragon Roll","U12345678","U87654321","COMPLETED"));
+        orderhistory.add(new OrderInfo("#202303","Napoleones","U12345678","U87654321","COMPLETED"));
+        orderhistory.add(new OrderInfo("#202303","The Poke","U12345678","U87654321","COMPLETED"));
+        orderhistory.add(new OrderInfo("#202303","Hot Brewed Coffee, Napoleones","U12345678","U87654321","COMPLETED"));
+
+
+        adapter.setInstance(orderhistory);
+        // loadOrders();
+
     }
 
 

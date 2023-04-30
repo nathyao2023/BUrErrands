@@ -5,19 +5,14 @@ public class OrderInfo {
     private String Itemname;
     private String DeliveryID;
     private String CustomerID;
-    private String Identity;
     private String order_status;
 
-    public OrderInfo(){
-    }
-
-    public OrderInfo(String OrderID, String Itemname, String DeliveryID, String CustomerID, String Identity, String order_status){
-        OrderID = OrderID;
-        Itemname = Itemname;
-        DeliveryID = DeliveryID;
-        CustomerID = CustomerID;
-        Identity = Identity;
-        order_status = order_status;
+    public OrderInfo(String OrderID, String Itemname, String DeliveryID, String CustomerID, String order_status){
+        this.OrderID = OrderID;
+        this.Itemname = Itemname;
+        this.DeliveryID = DeliveryID;
+        this.CustomerID = CustomerID;
+        this.order_status = order_status;
     }
 
     public String getOrderID(){
@@ -46,14 +41,6 @@ public class OrderInfo {
     public void setCustomerId(String CustomerID){
 
         CustomerID = CustomerID;
-    }
-    public String getIdentity(){
-
-        return Identity;
-    }
-    public void setIdentity(String Identity){
-
-        Identity = Identity;
     }
     public String getOrder_status(){
 

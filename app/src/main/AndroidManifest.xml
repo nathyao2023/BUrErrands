@@ -42,6 +42,9 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+        <activity
+            android:name=".util.OrderHistory"
+            android:exported="true" />
 <!--        <activity -->
 <!-- master -->
 <!--           android:name=".LoginActivity" -->
