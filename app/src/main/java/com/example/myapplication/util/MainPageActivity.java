@@ -59,7 +59,7 @@ public class MainPageActivity extends AppCompatActivity {
                     intent = new Intent(MainPageActivity.this, MainActivity.class);
                     break;
                 case R.id.bt_OrderHistory:
-                    intent = new Intent(MainPageActivity.this, CActivity.class);
+                    intent = new Intent(MainPageActivity.this, OrderHistory.class);
                     break;
             }
             startActivity(intent);
