@@ -29,23 +29,12 @@ public class DBHelper extends SQLiteOpenHelper {
                 "address text," +
                 "headImageBase64 text" +
                 ")");
-        db.execSQL("create table if not exists order_tb(" +
-                "id integer primary key autoincrement,"+
-                "nam text,"+
-                "passwor text," +
-                "se text," +
-                "emai text," +
-                "phon text," +
-                "addres text," +
-                "headImageBase text" +
-                ")");
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists user");
-        db.execSQL("drop table if exists order");
         onCreate(db);
     }
 
