@@ -94,8 +94,8 @@ public class MainPageActivity extends AppCompatActivity {
         category.add(new CategoryDomain("Pizza", "cat_1"));
         category.add(new CategoryDomain("Burgers", "cat_2"));
         category.add(new CategoryDomain("Hotdogs", "cat_3"));
-        category.add(new CategoryDomain("Donuts", "cat_4"));
-        category.add(new CategoryDomain("Drinks", "cat_5"));
+        category.add(new CategoryDomain("Drinks", "cat_4"));
+        category.add(new CategoryDomain("Snacks", "cat_5"));
 
         adapter = new CategoryAdapter(category);
         recyclerViewCategoryList.setAdapter(adapter);
@@ -106,9 +106,15 @@ public class MainPageActivity extends AppCompatActivity {
         recyclerViewPopularList.setLayoutManager(linearLayoutManager);
 
         ArrayList<FoodDomain> foodList = new ArrayList<>();
-        foodList.add(new FoodDomain("Pepperoni pizza","pizza1","slice pepperoni, mozzarella cheese,fresh oregano,ground black pepper", 12.99));
-        foodList.add(new FoodDomain("Cheese Burger","burger","beef, Gouda Cheese, Special Sauce, Lettuce, tomato",6.59));
-        foodList.add(new FoodDomain("Vegetable Pizza","pizza2","olive oil, vegetable oil, pitted kalamata, cherry tomatos",10.99));
+        foodList.add(new FoodDomain("Pepperoni pizza","pizza1","Otto\nSlice pepperoni, mozzarella cheese,fresh oregano,ground black pepper", 12.99));
+        foodList.add(new FoodDomain("Cheese Burger","burger","Wallace\nBeef, Gouda Cheese, Special Sauce, Lettuce, tomato",6.59));
+        foodList.add(new FoodDomain("Vegetable Pizza","pizza2","Otto\nOlive oil, vegetable oil, pitted kalamata, cherry tomatos",10.99));
+        foodList.add(new FoodDomain("Hot Brewed Coffee","hotbrewedcoffee","Starbucks\nHot Brewed Coffee",5.25));
+        foodList.add(new FoodDomain("Napoleones","napoleones","Starbucks\nNapoleones",4.50));
+        foodList.add(new FoodDomain("Fried Rice","sidesfriedrice","Panda Express\nFried rice with beans and eggs",4.40));
+        foodList.add(new FoodDomain("Dragon Roll","dragonroll","Basho\nWhite rice and vegetables rolled with fresh salmon",14.00));
+        foodList.add(new FoodDomain("The Poke","poke","Basho\nPoh-Keh, is a traditional food from Hawaii, which is tuna slice served with rice, vegetables and fruits. Many sauces to choose from",17.00));
+        foodList.add(new FoodDomain("Wireless Power Bank","wirelesspb","T.J.Max\nXiaomi 10000mAh capacity, 18w with USB-C, supports 10w wireless super charge",49.00));
 
         adapter2 = new PopularAdapter(foodList);
         recyclerViewPopularList.setAdapter(adapter2);
