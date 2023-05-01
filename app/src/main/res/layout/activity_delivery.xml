@@ -8,7 +8,6 @@
     tools:context=".DeliveryActivity">
 
 
-
     <com.scwang.smart.refresh.layout.SmartRefreshLayout
         android:id="@+id/smartRefreshLayout"
         android:layout_width="match_parent"
