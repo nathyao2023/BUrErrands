@@ -21,22 +21,24 @@
             android:textColor="#000"
             android:textSize="18sp"
             tools:ignore="HardcodedText" />
-        <Button
-            android:id="@+id/back"
-            android:layout_width="80dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/bg_settlement"
-            android:gravity="center"
-            android:text="Back"
-            android:textColor="#FFF"
-            android:textSize="16sp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="18dp" />
-        <!--edit-->
+        <!--
+         <Button
+             android:id="@+id/back"
+             android:layout_width="80dp"
+             android:layout_height="25dp"
+             android:layout_marginTop="20dp"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:background="@drawable/bg_settlement"
+             android:gravity="center"
+             android:text="Back"
+             android:textColor="#FFF"
+             android:textSize="16sp"
+             tools:ignore="MissingConstraints"
+             tools:layout_editor_absoluteX="16dp"
+             tools:layout_editor_absoluteY="18dp" />
+             -->
+         <!--edit-->
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
