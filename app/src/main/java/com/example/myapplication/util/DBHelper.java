@@ -29,6 +29,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 "address text," +
                 "headImageBase64 text" +
                 ")");
+
     }
 
     @Override

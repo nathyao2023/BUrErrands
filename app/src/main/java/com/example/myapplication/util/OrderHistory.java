@@ -1,11 +1,16 @@
 package com.example.myapplication.util;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.MainActivity;
 import com.example.myapplication.R;
 
 import java.util.ArrayList;
@@ -17,6 +22,7 @@ public class OrderHistory extends AppCompatActivity {
     public RecyclerView.LayoutManager layoutManager;
 
     public OrderListAdapter adapter;
+    //private Button BackButton;
 
 
 
@@ -24,6 +30,9 @@ public class OrderHistory extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
+
+        //BackButton = findViewById(R.id.back);
+        //setClickListener();
 
         recyclerView = findViewById(R.id.listOrder);
         adapter = new OrderListAdapter();
@@ -46,6 +55,27 @@ public class OrderHistory extends AppCompatActivity {
         // loadOrders();
 
     }
+
+    /*
+    private class OnClick implements View.OnClickListener{
+        @Override
+        public void onClick(View view) {
+            Intent intent = null;
+            switch (view.getId()){
+                case R.id.back:
+                    intent = new Intent(OrderHistory.this, MainPageActivity.class);
+                    break;
+            }
+            startActivity(intent);
+        }
+    }
+
+    private void setClickListener(){
+        OnClick onClick = new OnClick();
+        BackButton.setOnClickListener(onClick);
+    }
+
+     */
 
 
     //private void loadOrders(String userID) {
