@@ -35,7 +35,7 @@ public class DeliveryActivity extends AppCompatActivity {
         List<Order> orders = new ArrayList<>();
         orders.add(new Order("#202301", "Restaurant name 1 ", "1075 CommonWealth Ave", "455 CommonWealth Ave"));
         orders.add(new Order("#202302", "Restaurant name 2 ", "1075 CommonWealth Ave", "455 CommonWealth Ave"));
-        orders.add(new Order("#202303","KFC","1100 Commonwealth Ave","585 Commonwealth Ave"));
+
         orders.add(new Order("#202304", "Restaurant name 3 ", "1075 CommonWealth Ave", "455 CommonWealth Ave"));
         orders.add(new Order("#202305", "Restaurant name 4 ", "1075 CommonWealth Ave", "455 CommonWealth Ave"));
         orders.add(new Order("#202306", "Restaurant name 5 ", "1075 CommonWealth Ave", "455 CommonWealth Ave"));

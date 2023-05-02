@@ -111,14 +111,16 @@ public class CartListActivity extends AppCompatActivity {
         double percentTax = 0.02;
         double delivery = 10;
 
-        tax = Math.round((managementCart.getTotalFee() * percentTax) * 100) / 100;
-        double total = Math.round((managementCart.getTotalFee() + tax + delivery) * 100) / 100;
-        double itemTotal = Math.round(managementCart.getTotalFee() * 100) / 100;
+//        保留小数点后两位；keep it to two decimal places
 
-        totalFeeTxt.setText("$" + itemTotal);
-        taxTxt.setText("$" + tax);
-        deliveryTxt.setText("$" + delivery);
-        totalTxt.setText("$" + total);
+        tax = managementCart.getTotalFee() * percentTax;
+        double total = managementCart.getTotalFee() + tax + delivery;
+        double itemTotal = managementCart.getTotalFee();
+//        格式化结算 Formatted settlement
+        totalFeeTxt.setText(String.format("$%.2f", itemTotal));
+        taxTxt.setText(String.format("$%.2f", tax));
+        deliveryTxt.setText(String.format("$%.2f", delivery));
+        totalTxt.setText(String.format("$%.2f", total));
 
     }
 }
