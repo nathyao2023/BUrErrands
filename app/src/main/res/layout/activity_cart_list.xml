@@ -115,8 +115,8 @@
                 android:layout_marginTop="32dp"
                 android:text="My Cart"
                 android:textAlignment="center"
-                android:textColor="#ff3d00"
-                android:textSize="20sp"
+                android:textColor="@color/bu_red"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -141,7 +141,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Items Total:"
-                    android:textColor="#373b54"
+                    android:textColor="@color/deep_grey"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -171,7 +171,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Delivery Services:"
-                    android:textColor="#373b54"
+                    android:textColor="@color/deep_grey"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     tools:ignore="DuplicateIds" />
@@ -202,7 +202,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Tax:"
-                    android:textColor="#373b54"
+                    android:textColor="@color/deep_grey"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     tools:ignore="DuplicateIds" />
@@ -233,7 +233,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Total:"
-                    android:textColor="#373b54"
+                    android:textColor="@color/deep_grey"
                     android:textSize="30sp"
                     android:textStyle="bold" />
 
@@ -253,7 +253,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:background="@drawable/orange_button"
+                android:background="@color/bu_red"
                 android:gravity="center"
                 android:text="CheckOut"
                 android:textColor="#ffffff"

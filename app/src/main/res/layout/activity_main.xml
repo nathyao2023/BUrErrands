@@ -9,6 +9,14 @@
     tools:context=".MainActivity"
     tools:ignore="ExtraText">
 
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rv_store"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_above="@+id/lay_bottom"-->
+<!--        android:layout_below="@+id/toolbar"-->
+<!--        android:padding="12dp" />-->
+    <!--Pull down to refresh the area-->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -20,8 +28,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Shopping Cart"
-            android:textColor="#000"
-            android:textSize="18sp"
+            android:textColor="@color/deep_grey"
+            android:textSize="20sp"
+            android:textStyle="bold"
             tools:ignore="HardcodedText" />
         <!--edit-->
         <TextView
@@ -32,18 +41,10 @@
             android:layout_marginEnd="12dp"
             android:padding="@dimen/dp_4"
             android:text="Edit"
-            android:textColor="#000"
+            android:textColor="@color/deep_grey"
             android:textSize="16sp" />
     </androidx.appcompat.widget.Toolbar>
 
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/rv_store"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_above="@+id/lay_bottom"-->
-<!--        android:layout_below="@+id/toolbar"-->
-<!--        android:padding="12dp" />-->
-    <!--Pull down to refresh the area-->
     <com.scwang.smart.refresh.layout.SmartRefreshLayout
         android:id="@+id/refresh"
         android:layout_width="match_parent"
@@ -135,8 +136,9 @@
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/tv_total"
             android:text="Total:"
-            android:textColor="#000"
-            android:textSize="18sp" />
+            android:textColor="@color/deep_grey"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_total"
@@ -146,8 +148,9 @@
             android:layout_marginRight="8dp"
             android:layout_toLeftOf="@+id/tv_settlement"
             android:text="$0"
-            android:textColor="#DF3B0D"
-            android:textSize="14sp" />
+            android:textColor="#8e2323"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <!--checkout-->
         <TextView
@@ -161,7 +164,8 @@
             android:gravity="center"
             android:text="Checkout"
             android:textColor="#FFF"
-            android:textSize="16sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <!--Bottom layout appears when click edit-->
         <LinearLayout

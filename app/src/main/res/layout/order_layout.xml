@@ -2,22 +2,23 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="18dp">
+    android:layout_margin="18dp"
+    android:background="@color/grey">
 
     <LinearLayout
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_gravity="center_vertical"
-        android:background="@color/order_back">
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#63302b2b"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_weight="9"
             android:layout_width="0dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/order_id"
@@ -27,6 +28,7 @@
                 android:gravity="center_vertical|start"
                 android:text="#12345"
                 android:textAllCaps="true"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -37,40 +39,44 @@
                 android:gravity="center_vertical|start"
                 android:text="Fried Rice"
                 android:textAllCaps="true"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/Delivery_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:gravity="center_vertical|start"
-                android:textAllCaps="true"
-                android:textStyle="bold"
                 android:text="U12345678"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
 
             <TextView
                 android:id="@+id/Customer_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:gravity="center_vertical|start"
-                android:textAllCaps="true"
-                android:textStyle="bold"
                 android:text="U87654321"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
 
             <TextView
                 android:id="@+id/order_status"
-                android:layout_marginRight="10dp"
-                android:layout_gravity="right"
-                android:textAllCaps="true"
-                android:textStyle="bold"
-                android:text="Completed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/bu_red"/>
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:text="Completed"
+                android:textAllCaps="true"
+                android:textColor="@color/bu_red"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </LinearLayout>

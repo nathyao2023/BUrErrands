@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="410dp"
     android:layout_height="match_parent"
-    android:background="#ae535b"
+    android:background="#8e2323"
     android:orientation="vertical">
 
     <LinearLayout
@@ -16,19 +16,22 @@
             android:id="@+id/ibt_userHead"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:srcCompat="@mipmap/avatar"
-            android:layout_marginTop="5dp"
             android:layout_marginLeft="10dp"
-            android:scaleType="centerCrop"/>
+            android:layout_marginTop="5dp"
+            android:background="@drawable/user"
+            android:backgroundTint="@color/bitGrey"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/head" />
 
         <TextView
             android:id="@+id/tv_username"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="BUID"
-            android:textSize="30dp"
             android:layout_margin="30dp"
-            android:textColor="@color/white"/>
+            android:text="BUID"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -45,17 +48,18 @@
             android:layout_weight="3"
             android:text="Email:"
             android:textColor="@color/white"
-            android:textSize="22dp" />
+            android:textSize="22dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_userAge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:layout_weight="1"
-            android:textSize="22dp"
             android:layout_marginTop="20dp"
-            android:text="TextView" />
+            android:layout_weight="1"
+            android:text="TextView"
+            android:textColor="@color/white"
+            android:textSize="22dp" />
 
     </LinearLayout>
 
@@ -72,16 +76,17 @@
             android:layout_weight="3"
             android:text="Gender:"
             android:textColor="@color/white"
-            android:textSize="22dp" />
+            android:textSize="22dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_userSex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:text="TextView"
             android:textColor="@color/white"
-            android:textSize="22dp"
-            android:text="TextView" />
+            android:textSize="22dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -97,16 +102,17 @@
             android:layout_weight="3"
             android:text="Phone:"
             android:textColor="@color/white"
-            android:textSize="22dp" />
+            android:textSize="22dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_userFavorite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:text="TextView"
             android:textColor="@color/white"
-            android:textSize="22dp"
-            android:text="TextView" />
+            android:textSize="22dp" />
 
     </LinearLayout>
 
@@ -123,16 +129,17 @@
             android:layout_weight="1"
             android:text="Address:"
             android:textColor="@color/white"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_userSignature"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="9"
+            android:text="TextView"
             android:textColor="@color/white"
-            android:textSize="22dp"
-            android:text="TextView" />
+            android:textSize="22dp" />
 
     </LinearLayout>
 
@@ -141,16 +148,17 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/bt_toEdit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="130dp"
-            android:background="@color/bitGrey"
-            android:paddingLeft="180dp"
-            android:text="Edit info>"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_toEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:background="@color/bitGrey"
+        android:paddingLeft="180dp"
+        android:text="Edit info>"
+        android:textColor="@color/white"
+        android:textSize="25dp" />
 
 </LinearLayout>

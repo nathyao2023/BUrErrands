@@ -10,42 +10,48 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#63302b2b"
         android:orientation="vertical"
-        android:background="@color/order_back"
         android:padding="8dp">
 
         <TextView
             android:id="@+id/order_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Order ID: #12345" />
+            android:text="Order ID: #12345"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/order_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Order Name: StarBucks" />
+            android:text="Order Name: StarBucks"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/start_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Start Address: 1100 CommonWealth Ave" />
+            android:text="Start Address: 1100 CommonWealth Ave"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/end_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="End Address: 888 CommonWealth Ave" />
+            android:text="End Address: 888 CommonWealth Ave"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/accept_order_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/order_btn_back"
-            android:textColor="@color/order_button_text"
             android:layout_gravity="end"
-            android:text="Accept Order" />
+            android:backgroundTint="@color/bu_red"
+            android:text="Accept Order"
+            android:textColor="@color/order_button_text"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
