@@ -17,6 +17,7 @@ import com.example.myapplication.Helper.ManagementCart;
 import com.example.myapplication.Interface.ChangeNumberItemsListener;
 import com.example.myapplication.R;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHolder> {
@@ -43,9 +44,15 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
+        DecimalFormat df = new DecimalFormat("#.##");
         holder.title.setText(foodDomains.get(position).getTitle());
         holder.feeEachItem.setText(String.valueOf(foodDomains.get(position).getFee()));
-        holder.totalEachItem.setText(String.valueOf(Math.round((foodDomains.get(position).getNumberInCart() * foodDomains.get(position).getFee()) * 100) / 100));
+        // 去掉四舍五入
+        double totalWithoutRounding = foodDomains.get(position).getNumberInCart() * foodDomains.get(position).getFee();
+
+        // 格式化 totalWithoutRounding，并设置为 holder.totalEachItem 的文本
+        holder.totalEachItem.setText(df.format(totalWithoutRounding));
+
         holder.num.setText(String.valueOf(foodDomains.get(position).getNumberInCart()));
 
         int drawableResourceId=holder.itemView.getContext().getResources().getIdentifier(foodDomains.get(position).getPic()
