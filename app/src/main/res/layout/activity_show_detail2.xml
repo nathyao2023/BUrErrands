@@ -23,8 +23,8 @@
                 android:layout_marginTop="60dp"
                 android:text="Title"
                 android:textAlignment="center"
-                android:textColor="#373b54"
-                android:textSize="24sp"
+                android:textColor="@color/deep_grey"
+                android:textSize="28sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -33,8 +33,9 @@
                 android:layout_height="wrap_content"
                 android:text="$"
                 android:textAlignment="center"
-                android:textColor="#ff5e00"
-                android:textSize="24sp" />
+                android:textColor="@color/bu_red"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/foodPic"
@@ -63,7 +64,7 @@
                     android:layout_marginEnd="16dp"
                     android:text="1"
                     android:textAlignment="center"
-                    android:textColor="#373b54"
+                    android:textColor="@color/deep_grey"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -92,13 +93,13 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_margin="16dp"
-        android:text="Add to Card"
-        android:background="@drawable/orange_button_background"
+        android:background="@color/bu_red"
+        android:elevation="3dp"
         android:gravity="center"
+        android:text="Add to Card"
         android:textColor="#ffffff"
         android:textSize="23sp"
         android:textStyle="bold"
-        android:elevation="3dp"
         app:layout_constraintBottom_toBottomOf="@+id/scrollView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

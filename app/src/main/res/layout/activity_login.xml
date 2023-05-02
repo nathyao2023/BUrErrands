@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg5"
     android:orientation="vertical"
-    android:background="#ae535b"
     tools:context=".LoginActivity">
 
     <LinearLayout
@@ -14,7 +14,7 @@
         android:layout_marginHorizontal="30dp"
         android:layout_marginTop="80dp"
         android:background="@drawable/bt_humditiy"
-        android:backgroundTint="#dcd2c6"
+        android:backgroundTint="@color/white"
         android:orientation="horizontal">
 
         <TextView
@@ -24,9 +24,9 @@
             android:layout_marginLeft="15dp"
             android:layout_weight="5"
             android:text="BU ID："
-            android:textStyle="bold"
-            android:textColor="#dcd2c6"
-            android:textSize="15dp" />
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/Ed_username"
@@ -50,13 +50,13 @@
 
         <TextView
             android:id="@+id/textView11"
-            android:layout_width="96dp"
+            android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_weight="5"
             android:text="Password:"
-            android:textColor="#dcd2c6"
-            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <EditText
@@ -89,7 +89,7 @@
             android:checked="false"
             android:clickable="true"
             android:text="Remember Me"
-            android:textColor="#dcd2c6"
+            android:textColor="@color/white"
             android:textColorHighlight="@color/white"
             android:textColorHint="@color/white"
             android:textColorLink="@color/white"
@@ -114,20 +114,20 @@
             android:layout_weight="1"
             android:background="@drawable/bt_humditiy"
             android:text="LOG IN"
-            android:textColor="#dcd2c6"
-            android:textSize="20sp" />
+            android:textColor="@color/white"
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/bt_register"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:background="@drawable/bt_humditiy"
             android:text="REGISTER"
-            android:textColor="#dcd2c6"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:textSize="20sp" />
+            android:textColor="@color/white"
+            android:textSize="24sp" />
     </LinearLayout>
 
 </LinearLayout>
