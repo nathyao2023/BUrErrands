@@ -20,7 +20,7 @@ public class CartListActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private RecyclerView recyclerViewList;
     private ManagementCart managementCart;
-    TextView totalFeeTxt, taxTxt, deliveryTxt, totalTxt, emptyTxt;
+    TextView totalFeeTxt, taxTxt, deliveryTxt, totalTxt, emptyTxt, textViewCheckOutTxt;
     private double tax;
     private ScrollView scrollView;
 
@@ -34,27 +34,27 @@ public class CartListActivity extends AppCompatActivity {
         initView();
         initList();
         CalculateCart();
-        BottomNavigation();
+//        BottomNavigation();
 
     }
 
-    private void BottomNavigation() {
-        FloatingActionButton floatingActionButton = findViewById(R.id.cartBtn);
-        LinearLayout homeBtn = findViewById(R.id.home_Btn);
-
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(CartListActivity.this, CartListActivity.class));
-            }
-        });
-        homeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(CartListActivity.this, MainActivity.class));
-            }
-        });
-    }
+//    private void BottomNavigation() {
+//        FloatingActionButton floatingActionButton = findViewById(R.id.cartBtn);
+//        LinearLayout homeBtn = findViewById(R.id.home_Btn);
+//
+//        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(CartListActivity.this, CartListActivity.class));
+//            }
+//        });
+//        homeBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(CartListActivity.this, MainActivity.class));
+//            }
+//        });
+//    }
 
     private void initView() {
         recyclerViewList = findViewById(R.id.recyclerView);
@@ -64,7 +64,24 @@ public class CartListActivity extends AppCompatActivity {
         totalTxt = findViewById(R.id.totalTxt);
         emptyTxt = findViewById(R.id.emptyTxt);
         scrollView = findViewById(R.id.scrollView3);
-        recyclerViewList = findViewById(R.id.cartView);
+        recyclerViewList = findViewById(R.id.cartView_s);
+        textViewCheckOutTxt = findViewById(R.id.textView_check_out);
+
+        textViewCheckOutTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 清空购物车
+                managementCart.clear();
+                // 重新初始化购物车列表
+                initList();
+                // 重新计算购物车费用
+                CalculateCart();
+            }
+        });
+
+
+
+
     }
 
     private void initList() {
