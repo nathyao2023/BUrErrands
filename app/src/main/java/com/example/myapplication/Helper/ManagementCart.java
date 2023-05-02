@@ -70,5 +70,11 @@ public class ManagementCart {
 
     }
 
+    public void clear() {
+        tinyDB.remove("CartList");
+        Toast.makeText(context, "Cart has been cleared", Toast.LENGTH_LONG).show();
+    }
+
+
 
 }
