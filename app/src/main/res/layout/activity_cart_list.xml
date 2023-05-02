@@ -6,6 +6,80 @@
     android:layout_height="match_parent"
     tools:context=".CartListActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFF"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+        <!--edit-->
+        <TextView
+            android:id="@+id/tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginEnd="12dp"
+            android:padding="@dimen/dp_4"
+            android:text="Edit"
+            android:textColor="#000"
+            android:textSize="16sp" />
+    </androidx.appcompat.widget.Toolbar>
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lay_bottom"
+        android:layout_below="@+id/toolbar"
+        app:srlAccentColor="#000"
+        app:srlPrimaryColor="#00000000"
+        tools:ignore="UnknownIdInLayout">
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--list-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_store"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp" />
+            <!--Displayed when the cart is empty-->
+            <LinearLayout
+                android:id="@+id/lay_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_shopping_cart" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Nothing is here" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Pull down to add data" />
+            </LinearLayout>
+        </RelativeLayout>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
 
     <ScrollView
         android:id="@+id/scrollView3"
@@ -17,6 +91,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -184,6 +259,55 @@
                 android:textColor="#ffffff"
                 android:textSize="25sp"
                 android:textStyle="bold" />
+            <LinearLayout
+                android:id="@+id/lay_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_toRightOf="@+id/tv_checked_all"
+                android:background="#FFF"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_share_goods"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:background="#f4c600"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:text="Share"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_collect_goods"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="1dp"
+                    android:layout_weight="0.3"
+                    android:background="#ea8010"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:text="Favorite"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_delete_goods"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="1dp"
+                    android:layout_weight="0.3"
+                    android:background="#eb4f38"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:text="Delete"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

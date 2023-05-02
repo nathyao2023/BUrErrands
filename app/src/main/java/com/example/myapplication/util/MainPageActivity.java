@@ -14,6 +14,7 @@ import com.example.myapplication.Domain.CategoryDomain;
 import com.example.myapplication.Domain.FoodDomain;
 import com.example.myapplication.MainActivity;
 import com.example.myapplication.Order;
+import com.example.myapplication.OrderHistoryActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.adapter.CategoryAdapter;
 import com.example.myapplication.adapter.PopularAdapter;
@@ -60,7 +61,7 @@ public class MainPageActivity extends AppCompatActivity {
                     intent = new Intent(MainPageActivity.this, CartListActivity.class);
                     break;
                 case R.id.bt_OrderHistory:
-                    intent = new Intent(MainPageActivity.this, OrderHistory.class);
+                    intent = new Intent(MainPageActivity.this, OrderHistoryActivity.class);
                     break;
             }
             startActivity(intent);

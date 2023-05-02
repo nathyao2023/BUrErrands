@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.myapplication.adapter.CartListAdapter;
 import com.example.myapplication.Helper.ManagementCart;
 import com.example.myapplication.Interface.ChangeNumberItemsListener;
+import com.example.myapplication.util.OrderHistory;
+import com.example.myapplication.util.OrderInfo;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class CartListActivity extends AppCompatActivity {
@@ -68,8 +70,16 @@ public class CartListActivity extends AppCompatActivity {
         textViewCheckOutTxt = findViewById(R.id.textView_check_out);
 
         textViewCheckOutTxt.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+                // 跳转到 OrderInfo Activity，并传递相关数据
+                Intent intent = new Intent(CartListActivity.this, OrderActivity.class);
+                intent.putExtra("itemTotal", managementCart.getTotalFee());
+                intent.putExtra("tax", tax);
+                intent.putExtra("delivery", 10.0);
+                intent.putExtra("total", managementCart.getTotalFee() + tax + 10.0);
+                startActivity(intent);
                 // 清空购物车
                 managementCart.clear();
                 // 重新初始化购物车列表

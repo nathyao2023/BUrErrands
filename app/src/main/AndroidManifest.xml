@@ -48,6 +48,12 @@
             android:name=".MainActivity"
             android:exported="true" />
         <activity
+            android:name=".OrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrderHistoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".util.OrderHistory"
             android:exported="true" /> <!-- <activity -->
         <!-- master -->
