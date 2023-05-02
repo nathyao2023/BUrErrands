@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.CActivity;
+import com.example.myapplication.CartListActivity;
 import com.example.myapplication.Domain.CategoryDomain;
 import com.example.myapplication.Domain.FoodDomain;
 import com.example.myapplication.MainActivity;
@@ -56,7 +57,7 @@ public class MainPageActivity extends AppCompatActivity {
             Intent intent = null;
             switch (view.getId()){
                 case R.id.bt_shopping_cart:
-                    intent = new Intent(MainPageActivity.this, MainActivity.class);
+                    intent = new Intent(MainPageActivity.this, CartListActivity.class);
                     break;
                 case R.id.bt_OrderHistory:
                     intent = new Intent(MainPageActivity.this, OrderHistory.class);
